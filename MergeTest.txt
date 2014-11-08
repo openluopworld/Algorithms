@@ -1,4 +1,4 @@
 
-master-- Add this file in master branch
+master-- 在master分支中增加本文件
 
-master-- the change from the master branch
+master-- 来自master的修改

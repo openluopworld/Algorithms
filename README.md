@@ -1,4 +1,4 @@
 Algorithms
 ==========
 
-The analysis and implementation of some algorithms
+常见算法的分析与实现
