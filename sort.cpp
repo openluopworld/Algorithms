@@ -5,6 +5,59 @@ using namespace std;
 #include"sort.h"
 
 /*
+** 冒泡排序：非降序
+** 基本思路：每次选择一个最大的元放置在数组的最末尾
+*/
+void bubbleSort ( int *a, const int length ) {
+
+	int i = 0;      // 循环变量
+	int j = 0;      // 循环变量
+	int temp = 0;   // 交换元素的辅助变量
+
+	for ( i = 1; i < length; i++ ) {         // 对于length的元素的数组，只需要length-1次即可完成排序 
+		for ( j = 0; i < length-i; j++ ) {   // 依次比较两个元素
+			if ( a[j] < a[j+1] ) {           // 如果前面的元素小于后面的元素，则交换连个元素的位置
+				temp = a[j];
+				a[j] = a[j+1];
+				a[j+1] = temp;
+			}
+		}	
+	}
+
+}
+
+/*
+** 选择排序：非降序
+** 基本思路：每次选择一个最小的元素排在最前面
+*/
+void selectSort ( int *a, const int length ) {
+
+	int minValue = 0;   // 当前最小元素
+	int minIndex = 0;   // 最小元素的下标
+
+	int i = 0;          // 循环变量
+	int j = 0;          // 循环变量
+
+	for ( i = 0; i < length-1; i++ ) {
+		minValue = a[i];
+		minIndex = i;
+
+		for ( j = i+1; j < length; j++ ) {
+			if ( a[j] < minValue ) {      // 如果该元素比当前最小元素还小
+				minValue = a[j];
+				minIndex = j;
+			}
+		}
+
+		if ( minIndex != i) {             // 如果minIndex不等于i，说明最小元素不是a[i]，则需要交换
+			a[minIndex] = a[i];
+			a[i] = minValue;
+		}
+	}
+
+}
+
+/*
 ** 非降序插入排序
 ** 基本思路：逐个将元素插入到已经排好序的数组中
 ** 数组下标从0开始，第一个元素是已经排好序的，每一趟将后续一个元素加入到已经排好序的数组中，一共需要N-1趟
@@ -35,7 +88,7 @@ void insertSortInc ( int *a, const int length ) {
 
 /*
 ** 非升序插入排序
-** 基本思路：逐个将元素插入到已经排好序的数组中
+** 基本思路：和非降序的思路一样，只是在比较的时候是小于才交换
 */
 void insertSortDec ( int *a, const int length ) {
 	int temp;

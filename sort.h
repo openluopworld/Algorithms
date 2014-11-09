@@ -1,5 +1,15 @@
 
 /*
+** √∞≈›≈≈–Ú£∫∑«Ωµ–Ú
+*/
+void bubbleSort ( int *a, const int length );
+
+/*
+** —°‘Ò≈≈–Ú
+*/
+void selectSort ( int *a, const int length );
+
+/*
 ** ∑«Ωµ–Ú≤Â»Î≈≈–Ú
 */
 void insertSortInc ( int *a, const int length );
