@@ -4,6 +4,10 @@
 #include<stdlib.h>
 
 /*
+ * http://www.cnblogs.com/luop/p/4823101.html
+ */
+
+/*
 int maxMoney ( int *nums, int numsSize, int startIndex) {
     if ( startIndex >= numsSize ) {
         return 0;
